@@ -23,7 +23,7 @@ runs:
       run: |
         tar \
           --dereference --hard-dereference \
-          --directory "$INPUT_PATH" \
+          --directory "$(echo "$INPUT_PATH")" \
           -cvf "$RUNNER_TEMP/artifact.tar" \
           --exclude=.git \
           --exclude=.github \
